@@ -34,10 +34,6 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="md:col-span-8 lg:col-span-6 flex flex-col items-center text-center sm:items-start sm:text-left gap-6 pt-10 relative z-10"
           >
-            <div className="inline-block px-4 py-1.5 rounded-full bg-gold-main/20 text-gold-dark font-semibold text-sm tracking-wide uppercase shadow-sm">
-              The Five-Star Dental Spa Experience
-            </div>
-            
             <h1 style={{textShadow: "0 4px 40px rgba(0,0,0,0.15)"}} className="text-5xl md:text-6xl lg:text-[5rem] font-heading font-extrabold text-charcoal leading-[0.95] tracking-tighter">
               Sydney CBD's <br />
               <span className="text-gold-main bg-gold-shimmer -webkit-background-clip-text text-transparent bg-clip-text inline-block mt-2">Premier Dental Spa</span>
