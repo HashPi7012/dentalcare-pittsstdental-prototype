@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-main: #C5A059;
+  --color-gold-light: #D4B982;
+  --color-gold-dark: #A68241;
+  
+  --color-teal-muted: #5F7D7B;
+  --color-teal-light: #8BA3A1;
+  --color-teal-dark: #3E5251;
+  
+  --color-rosewood: #9E4244;
+  --color-off-white: #F9F9F9;
+  --color-charcoal: #1A1A1A;
+  --color-slate-grey: #4A4A4A;
+
+  --font-serif: var(--font-jakarta); /* Keeping var name for class compatibility, but it's a sans font now */
+  --font-sans: var(--font-outfit);
+  --font-heading: var(--font-jakarta);
+}
+
+@layer utilities {
+  .bg-gold-shimmer {
+    background-image: linear-gradient(135deg, #C5A059 0%, #D4B982 50%, #A68241 100%);
+  }
+  .text-gold-shimmer {
+    background-image: linear-gradient(135deg, #C5A059 0%, #D4B982 50%, #A68241 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gold-glow {
+    position: relative;
+  }
+  .bg-gold-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.4) 0%, rgba(212, 185, 130, 0.2) 100%);
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .bg-gold-glow:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes calm-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+  }
+
+  .animate-calm-pulse {
+    animation: calm-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee-scroll {
+    animation: marquee-scroll 18s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-marquee-scroll {
+      animation: marquee-scroll 25s linear infinite;
+    }
+  }
+
+  .animate-marquee-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  /* Section fluid flow transitions */
+  .section-bleed-bottom {
+    mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+  }
+
+  .section-bleed-top {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 12%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%);
+  }
+}
+
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+}
+
+/* CTA Button Micro-Interactions */
+button:active,
+a button:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
