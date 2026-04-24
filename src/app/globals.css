@@ -68,12 +68,12 @@
   }
 
   .animate-marquee-scroll {
-    animation: marquee-scroll 18s linear infinite;
+    animation: marquee-scroll 23s linear infinite;
   }
 
   @media (min-width: 768px) {
     .animate-marquee-scroll {
-      animation: marquee-scroll 25s linear infinite;
+      animation: marquee-scroll 32s linear infinite;
     }
   }
 

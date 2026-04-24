@@ -50,7 +50,7 @@ export function Navigation() {
                 ${isMerged ? 'rounded-2xl border-transparent bg-transparent text-charcoal backdrop-blur-0 shadow-none' : 'rounded-2xl bg-black/20 border border-white/10 text-white backdrop-blur-xl shadow-sm'}`}
             >
               <div className="font-heading text-xl font-bold flex items-center gap-2">
-                <span className="bg-gold-shimmer -webkit-background-clip-text text-transparent bg-clip-text whitespace-nowrap">Pitt's</span> Clinic
+                <span className="text-gold-main whitespace-nowrap">Pitt's</span> Clinic
               </div>
             </motion.div>
 

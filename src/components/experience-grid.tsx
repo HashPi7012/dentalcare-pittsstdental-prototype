@@ -43,9 +43,6 @@ export function ExperienceGrid() {
               We've engineered a luxury environment that removes clinical anxiety, guaranteeing aesthetic excellence without compromising your time or comfort.
             </p>
           </div>
-          <Button variant="outline" size="lg" className="hidden md:flex rounded-full px-8 py-6 font-jakarta font-semibold border-gold-main/20 hover:bg-gold-main/5 text-gold-main">
-            Explore Amenities
-          </Button>
         </div>
 
         <div className={`relative transition-[max-height] duration-1000 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[3000px]' : 'max-h-[850px] md:max-h-[3000px]'}`}>
@@ -66,8 +63,8 @@ export function ExperienceGrid() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
               
-              <div className="absolute top-10 left-10 w-16 h-16 bg-gold-main/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform z-20">
-                <Clock size={32} />
+              <div className="absolute top-6 left-6 md:top-10 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-gold-main/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform z-20">
+                <Clock className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               
               <div className="relative z-10 p-10 md:p-12">
@@ -95,8 +92,8 @@ export function ExperienceGrid() {
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent"></div>
               
               <div className="relative z-10 flex items-center gap-8 p-8">
-                <div className="min-w-[64px] h-16 bg-gold-main/10 rounded-2xl flex items-center justify-center text-gold-main">
-                  <Coffee size={32} />
+                <div className="min-w-[48px] h-12 md:min-w-[64px] md:h-16 bg-gold-main/10 rounded-2xl flex items-center justify-center text-gold-main">
+                  <Coffee className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 <div>
                   <h3 className="text-xl font-jakarta font-bold text-charcoal mb-1">Five-Star Amenities</h3>
@@ -111,10 +108,22 @@ export function ExperienceGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="md:col-span-1 bg-white p-8 rounded-3xl border border-gold-light/10 shadow-sm flex flex-col justify-between group hover:shadow-2xl transition-all duration-500 bg-gold-glow"
+              className="md:col-span-1 bg-white rounded-3xl border border-gold-light/10 shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
             >
-              <div className="text-gold-main"><Sparkles size={32} /></div>
-              <h3 className="text-lg font-jakarta font-bold text-charcoal">Needle-Free<br />Laser Excellence</h3>
+              <Image 
+                src="/images/experience/laser_dental_tech.png" 
+                alt="Needle-Free Laser" 
+                fill 
+                className="object-cover opacity-20 md:opacity-10 group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/90"></div>
+              
+              <div className="relative z-10 p-6 md:p-8 flex flex-col justify-between h-full">
+                <div className="absolute top-4 right-4 md:static text-gold-main bg-white/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 p-1.5 md:p-0 rounded-lg">
+                  <Sparkles className="w-6 h-6 md:w-8 md:h-8" />
+                </div>
+                <h3 className="text-lg font-jakarta font-bold text-charcoal">Needle-Free<br />Laser Excellence</h3>
+              </div>
             </motion.div>
 
             {/* Tile 4 - Small (1x1): Sleep Dentistry (NEW) */}
@@ -123,12 +132,24 @@ export function ExperienceGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.25 }}
-              className="md:col-span-1 bg-white p-8 rounded-3xl border border-gold-light/10 shadow-sm flex flex-col justify-between group hover:shadow-2xl transition-all duration-500 bg-gold-glow"
+              className="md:col-span-1 bg-white rounded-3xl border border-gold-light/10 shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
             >
-              <div className="text-gold-main"><Moon size={32} /></div>
-              <div>
-                <h3 className="text-lg font-jakarta font-bold text-charcoal mb-1">Sleep Dentistry</h3>
-                <p className="text-xs text-slate-grey font-outfit">Anxiety-free care with IV sedation and sleep options.</p>
+              <Image 
+                src="/images/experience/sleep_dentistry.png" 
+                alt="Sleep Dentistry" 
+                fill 
+                className="object-cover opacity-20 md:opacity-10 group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/90"></div>
+              
+              <div className="relative z-10 p-6 md:p-8 flex flex-col justify-between h-full">
+                <div className="absolute top-4 right-4 md:static text-gold-main bg-white/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 p-1.5 md:p-0 rounded-lg">
+                  <Moon className="w-6 h-6 md:w-8 md:h-8" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-jakarta font-bold text-charcoal mb-1">Sleep Dentistry</h3>
+                  <p className="text-xs text-slate-grey font-outfit">Anxiety-free care with IV sedation and sleep options.</p>
+                </div>
               </div>
             </motion.div>
 
@@ -148,8 +169,10 @@ export function ExperienceGrid() {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/90"></div>
               
-              <div className="relative z-10 p-8 flex flex-col justify-between h-full">
-                <div className="text-gold-main"><Monitor size={32} /></div>
+              <div className="relative z-10 p-6 md:p-8 flex flex-col justify-between h-full">
+                <div className="absolute top-4 right-4 md:static text-gold-main bg-white/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 p-1.5 md:p-0 rounded-lg">
+                  <Monitor className="w-6 h-6 md:w-8 md:h-8" />
+                </div>
                 <div>
                   <h3 className="text-lg font-jakarta font-bold text-charcoal mb-1">Digital Smile Design</h3>
                   <p className="text-xs text-slate-grey font-outfit">See your new smile before treatment begins.</p>

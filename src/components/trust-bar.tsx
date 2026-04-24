@@ -35,6 +35,7 @@ export function TrustBar() {
                 width={400}
                 height={160}
                 className="object-contain h-16 md:h-32 w-auto"
+                priority={idx < 4}
               />
             </div>
           ))}
