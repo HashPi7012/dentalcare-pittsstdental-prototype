@@ -52,7 +52,7 @@ export function ExperienceGrid() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-2 md:row-span-2 bg-charcoal rounded-3xl border border-gold-light/10 shadow-sm flex flex-col justify-end relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
+              className="md:col-span-2 md:row-span-2 bg-charcoal rounded-3xl border border-gold-light/10 shadow-sm flex flex-col justify-end relative overflow-hidden group hover:shadow-2xl transition-all duration-500 h-[420px] md:h-auto"
             >
               <Image 
                 src="/images/experience/cerec_tech.png" 
@@ -63,13 +63,13 @@ export function ExperienceGrid() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
               
-              <div className="absolute top-6 left-6 md:top-10 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-gold-main/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform z-20">
+              <div className="absolute top-6 right-6 md:top-10 md:left-10 md:right-auto w-12 h-12 md:w-16 md:h-16 bg-gold-main/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform z-20">
                 <Clock className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               
-              <div className="relative z-10 p-10 md:p-12">
-                <h3 className="text-3xl font-jakarta font-bold text-white mb-4">CEREC Same-Day Crowns</h3>
-                <p className="text-white/80 font-outfit font-light leading-relaxed max-w-lg">
+              <div className="relative z-10 p-8 md:p-12">
+                <h3 className="text-2xl md:text-3xl font-jakarta font-bold text-white mb-4">CEREC Same-Day Crowns</h3>
+                <p className="text-white/80 font-outfit font-light leading-relaxed max-w-lg text-sm md:text-base">
                   Replace the traditional 2-week waiting period with a single 2-hour session. Premium porcelain produced on-site while you relax in our spa-grade suite.
                 </p>
               </div>
